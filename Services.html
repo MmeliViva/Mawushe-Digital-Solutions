@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>More Services | PropertyX</title>
+  <meta name="description" content="Beyond accommodation: PropertyX supplies firewood for weddings, funerals, and events, plus delivery, braai packs, cleaning, laundry add-ons, and more.">
+  <meta name="keywords" content="firewood for weddings, funeral firewood, event firewood delivery, braai wood, delivery and stacking, laundry, cleaning service, shuttle">
+  <meta name="author" content="PropertyX">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="More Services | PropertyX">
+  <meta property="og:description" content="Firewood for events with delivery & stacking, braai packs, and convenient add-ons from PropertyX.">
+  <meta property="og:image" content="assets/img/og/propertyx-services.jpg"><!-- TODO: replace -->
+  <meta property="og:url" content="https://www.your-domain.co.za/services.html">
+  <meta property="og:site_name" content="PropertyX">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
+  <link href="assets\img\icons\Modern Real Estate Logo Design.png"rel="icon">
+  <link href="assets\img\icons\Modern Real Estate Logo Design.png"rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,600,700|Poppins:400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/loader.css" rel="stylesheet">
+
+  <!-- Page-scoped styles -->
+  <style>
+    :root{
+      --px-accent:#14fdda;
+      --px-accent-200:#40f5ff;
+      --px-dark:#111;
+      --px-muted:#6b7280;
+      --px-border:#e5e7eb;
+    }
+
+    /* ===== Hero (scoped) ===== */
+    .services-hero{
+      position:relative; min-height:100vh; display:flex; align-items:center; color:#fff; overflow:hidden;
+    }
+    .services-hero .hero-bg{
+      position:absolute; 
+      inset:0;
+      background:
+        linear-gradient(120deg, rgba(0,0,0,.55), rgba(0,0,0,.35)),
+        url("PropertyX images/Other_services/other_services_hero.jpg") center/cover no-repeat; /* TODO: replace */
+    }
+    .services-hero .hero-card{
+      position:relative; 
+      z-index:1; 
+      border-radius:18px;
+      background: rgba(17,17,17,.35);
+      border:1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      padding:22px 22px 18px; box-shadow:0 12px 40px rgba(0,0,0,.28);
+    }
+    .services-hero .brand-tag{
+      display:inline-block; font-weight:700; letter-spacing:.3px; margin-bottom:.5rem;
+      color:#111; background:var(--px-accent); padding:.35rem .75rem; border-radius:999px;
+      box-shadow:0 10px 24px rgba(20, 253, 214, 0.35);
+    }
+    .services-hero h1{
+      font-size:clamp(2rem, 2.6vw + 1rem, 3rem); line-height:1.1; margin:.2rem 0 .6rem;
+    }
+    .services-hero p.lead{
+      color:#e9ecef; margin-bottom:1rem; font-size:1.05rem;
+    }
+    .services-hero .btn-accent{
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:var(--px-accent); color:#111; border:0;
+      padding:.8rem 1.1rem; border-radius:12px; font-weight:700; text-decoration:none;
+      box-shadow:0 10px 24px rgba(20, 253, 199, 0.35);
+      transition:.2s ease all;
+    }
+    .services-hero .btn-accent:hover{ background:var(--px-accent-200); transform:translateY(-1px); }
+
+    /* Matrix tiles inside the glass card */
+.service-matrix{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:12px;
+  margin-top:.5rem;
+}
+
+.svc{
+  display:flex; flex-direction:column; gap:.25rem;
+  padding:14px; border-radius:14px; text-decoration:none;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow: 0 4px 18px rgba(0,0,0,.18);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  color:#f2f5f7;
+}
+
+.svc:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
+}
+
+.svc i{
+  font-size:1.25rem;
+  color: var(--px-accent, #2FA39C); /* falls back to business teal if var is missing */
+  margin-bottom:.15rem;
+}
+
+.svc .t{
+  font-weight:700; line-height:1.15;
+  color:#ffffff;
+}
+
+.svc .s{
+  font-size:.9rem; line-height:1.2;
+  color:#cfe3e6; /* subtle hint text */
+}
+
+/* Optional: tighten heading & lead spacing inside card */
+.hero-title{ margin:.25rem 0 .25rem; }
+.hero-lead{ margin:0 0 .75rem; color:#e6f1f0; }
+
+
+    /* ===== Services Grid ===== */
+    .services-wrap{ padding:56px 30px 30px 20px; }
+    .section-eyebrow{
+      text-transform:uppercase; 
+      letter-spacing:.18em; 
+      font-weight:700; 
+      font-size:.82rem; 
+      color:#003d34;
+    }
+    .section-title{ font-size:2rem; margin:.3rem 0 .25rem; }
+    .section-sub{ color:var(--px-muted); }
+
+    .service-card{
+      border:1px solid var(--px-border); border-radius:16px; overflow:hidden; height:100%;
+      background:#fff; transition:.25s ease transform, .25s ease box-shadow;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+    .service-card:hover{ transform: translateY(-3px); box-shadow:0 16px 42px rgba(0,0,0,.12); }
+    .service-media{ position:relative; overflow:hidden; }
+    .service-media img{ width:100%; height:220px; object-fit:cover; transition: transform .5s ease; }
+    .service-card:hover .service-media img{ transform:scale(1.03); }
+    .service-body{ padding:18px; }
+    .service-body h3{ font-size:1.1rem; margin:0 0 .25rem; }
+    .service-body p{ color:#475569; margin:0 0 .5rem; }
+    .service-meta{ display:flex; gap:8px; flex-wrap:wrap; margin-top:.5rem; }
+    .badge-soft{
+      background:#fff7f0; color:#019861; border:1px solid #ffd4ad; border-radius:999px; padding:.25rem .6rem; font-size:.8rem; font-weight:600;
+    }
+    .service-cta{
+      display:flex; justify-content:space-between; align-items:center; margin-top:10px;
+    }
+    .service-cta a{ text-decoration:none; font-weight:600; color:var(--px-accent); }
+
+    /* ===== Packages ===== */
+    .packages{ padding:56px 30px 30px 20px; }
+    .pkg-card{
+      border:1px solid var(--px-border); border-radius:16px; padding:18px; height:100%; background:#fff;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+    .pkg-title{ font-size:1.05rem; font-weight:700; margin-bottom:.25rem; }
+    .pkg-sub{ color:var(--px-muted); margin-bottom:.6rem; }
+    .pkg-meta{ font-size:.92rem; color:#1f2937; }
+    .pkg-meta i{ color:var(--px-accent); margin-right:6px; }
+
+    /* ===== How it works ===== */
+    .how{ padding:56px 30px 30px 20px; }
+    .how .step{
+      background:#fff; border:1px solid var(--px-border); border-radius:16px; padding:18px; height:100%;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+    .step-no{
+      width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+      background:var(--px-accent); color:#111; border-radius:999px; font-weight:800; margin-right:8px;
+      box-shadow:0 8px 20px rgba(20, 253, 183, 0.35);
+    }
+
+    /* Map embed cleanup */
+    .embed-map-fixed{position:relative; text-align:right; width:100%; height:350px;}
+    .embed-map-container{overflow:hidden; background:none!important; width:100%; height:350px;}
+    .embed-map-frame{width:100%!important; height:350px!important;}
+
+    /* Small utilities */
+    .muted{ color:var(--px-muted); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-chat-square-text align-items-center fs-8"><span> info@propertyx.co.za</span></i>
+      </div>
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul><li>Your Home Away From Home</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <div class="logo-container d-flex flex-column align-items-center">
+        <a href="index.html" class="logo me-auto me-lg-0">
+          <img src="assets/img/icons/Modern Real Estate Logo Design.png"
+               style="background-color: rgba(253, 253, 253, 0.17); border-radius: 15px; padding: 2px;"
+               alt="PropertyX logo"
+               class="header-img">
+        </a>
+      </div>
+
+      <div class="nav-container">
+        <nav id="navbar" class="navbar order-last order-lg-0">
+           <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li class="dropdown"><a class="nav-link scrollto "  href="rooms.html"><span>Our Properties</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="guest_house.html">Guest House</a></li>
+                <li><a href="furnished_apartment.html">Furnished Apartments</a></li>
+                <li><a href="semi-furnished.html">Semi-Furnished</a></li>  
+                
+               
+              </ul>  
+            </li>
+            <li class="dropdown"><a class="nav-link scrollto active" href="Services.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="Services.html">Web development</a></li>
+                <li><a href="Services.html">Van hire</a></li>
+                <li><a href="Services.html">Fire wood</a></li>
+                <li><a href="Services.html">Cleaning services</a></li>
+                <li><a href="Services.html">Grass cutting</a></li>
+                
+              </ul>  
+            </li>
+            <!--li><a class="nav-link scrollto" href="#about1">Attractions</a></li-->
+            <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact us</a></li>
+            <li><a class="nav-link scrollto" href="FAQ.html">FAQ</a></li>
+          </ul>
+        </nav>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero ======= -->
+  <section class="services-hero d-flex align-items-center" aria-label="More Services hero">
+    <div class="hero-bg" role="img" aria-label="Firewood and event services background"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="hero-card">
+              <span class="brand-tag">PropertyX Services</span>
+              <h2 class="hero-title">Simple services. Real impact.</h2>
+              <p class="hero-lead">Pick what you need — mix & match.</p>
+
+              <div class="service-matrix" role="list">
+                <a class="svc" href="#services" role="listitem" aria-label="Web Development">
+                  <i class="bi bi-code-slash"></i>
+                  <span class="t">Web Development</span>
+                  <span class="s">Sites & landing pages</span>
+                </a>
+
+                <a class="svc" href="#services" role="listitem" aria-label="Van Hire">
+                  <i class="bi bi-truck"></i>
+                  <span class="t">Van Hire</span>
+                  <span class="s">Events & deliveries</span>
+                </a>
+
+                <a class="svc" href="#services" role="listitem" aria-label="Firewood Supply">
+                  <i class="bi bi-fire"></i>
+                  <span class="t">Firewood Supply</span>
+                  <span class="s">Weddings & funerals</span>
+                </a>
+
+                <a class="svc" href="#services" role="listitem" aria-label="Cleaning Services">
+                  <i class="bi bi-stars"></i>
+                  <span class="t">Cleaning</span>
+                  <span class="s">Homes & businesses</span>
+                </a>
+
+                <a class="svc" href="#services" role="listitem" aria-label="Post-Event & Construction Cleaning">
+                  <i class="bi bi-tools"></i>
+                  <span class="t">Post-Event / Build</span>
+                  <span class="s">Deep clean teams</span>
+                </a>
+
+                <a class="svc" href="#services" role="listitem" aria-label="Grass Cutting">
+                  <i class="bi bi-flower1"></i>
+                  <span class="t">Grass Cutting</span>
+                  <span class="s">Lawn & garden care</span>
+                </a>
+              </div>
+
+              <div class="mt-3">
+                <a href="#contact" class="btn-accent"><i class="bi bi-chat-left-text"></i> Request a Quote</a>
+              </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <div class="loader">
+          <div class="loader-content">
+            <img src="assets/img/icons/Modern Real Estate Logo Design.png" alt="Bibby's BnB Logo" class="loader-logo">
+            
+          </div>
+        </div>
+    <!-- ======= Services Overview ======= -->
+    <section id="services" class="services-wrap">
+     
+        <div class="row mb-3">
+          <div class="col-lg-10" data-aos="fade-up">
+            <div class="section-eyebrow">What we offer</div>
+          
+            <p class="section-sub">Professional, reliable, and tailored to your occasion.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Firewood for Events -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="assets/img/istockphoto-2210688897-1024x1024.jpg" alt="Stacked event firewood"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-fire"></i>Web Development</h3>
+                <p>Professional websites tailored to your brand—whether for businesses, portfolios, or e-commerce. 
+                  We create modern, responsive, and SEO-friendly sites that help you stand out online.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Responsive</span>
+                  <span class="badge-soft">SEO-Ready</span>
+                  <span class="badge-soft">Custom Design</span>
+                </div>
+                <div class="service-cta">
+                  <a href="#contact">Get a Website →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Delivery & Stacking -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="PropertyX images\Other_services\bakkie.png" alt="Delivery truck with wood"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-truck"></i>Van hire</h3>
+                <p>Reliable van hire for events, moving, and business needs. Our vehicles are well-maintained, 
+                  affordable, and available for both short- and long-term use.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Affordable rates</span>
+                  <span class="badge-soft">Flexible booking</span>
+                </div>
+                <div class="service-cta">
+                  <a href="#contact">Book a Van →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Braai Packs -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="PropertyX images\Other_services\fire_wood.jpg" alt="Braai packs prepared"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-basket3"></i> Braai Packs (Wood + Kindling)</h3>
+                <p>Convenient packs for guests and family gatherings—ready to light, easy to carry.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Ready-to-use</span>
+                  <span class="badge-soft">Add kindling</span>
+                </div>
+                <div class="service-cta">
+                  
+                  <a href="#contact">Order now →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Cleaning -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="PropertyX images\Other_services\nino-maghradze-BUXdQh53eis-unsplash.jpg" alt="Cleaning team"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-stars"></i> Cleaning & Turnover</h3>
+                <p>Post-event cleaning or regular turnover services for guesthouses and rentals.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Once-off</span>
+                  <span class="badge-soft">Scheduled</span>
+                </div>
+                <div class="service-cta">
+                  <a href="#contact">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Laundry -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="PropertyX images\Other_services\cleaning.webp" alt="Laundry service"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-bag-check"></i> Laundry Add-On</h3>
+                <p>Linens, towels, and garment care with reliable turnaround times.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Per kg</span>
+                  <span class="badge-soft">Express available</span>
+                </div>
+                <div class="service-cta">
+                  <a href="#contact">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Shuttle / Transfers -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="service-card h-100">
+              <div class="service-media">
+                <img src="PropertyX images\Other_services\shubhendu-mohanty-WhmgvMLCy7M-unsplash.jpg" alt="Shuttle transfers"><!-- TODO: replace -->
+              </div>
+              <div class="service-body">
+                <h3><i class="bi bi-geo-alt"></i>Grass cutting</h3>
+                <p>Keep your outdoor spaces neat and well-maintained with our professional grass cutting services. 
+                  Ideal for homes, businesses, and event venues.</p>
+                <div class="service-meta">
+                  <span class="badge-soft">Lawn care</span>
+                  <span class="badge-soft">Quick & efficient</span>
+                  <span class="badge-soft">Affordable</span>
+                </div>
+                <div class="service-cta">
+                  <a href="#contact">Request route →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      
+    </section>
+    <!-- End Services Overview -->
+
+
+
+    <!-- ======= How it works ======= -->
+    
+    <!-- ======= How it works ======= -->
+<section class="how">
+  <div class="row mb-3">
+    <div class="col-lg-8" data-aos="fade-up">
+      <div class="section-eyebrow">How it works</div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="step h-100">
+        <div class="step-head mb-2">
+          <span class="step-no">1</span>
+          <i class="bi bi-send"></i>
+          <strong>Contact us</strong>
+        </div>
+        <p class="muted">Call, WhatsApp, or use the form — whatever’s fastest.</p>
+        <a class="step-link" href="https://wa.me/27725036405">Start a query</a>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="60">
+      <div class="step h-100">
+        <div class="step-head mb-2">
+          <span class="step-no">2</span>
+          <i class="bi bi-clock-history"></i>
+          <strong>Quote in 24&nbsp;hours</strong>
+          <span class="badge-quick">24hrs</span>
+        </div>
+        <p class="muted">Clear pricing and timing — no surprises.</p>
+        <span class="step-meta">Approve via WhatsApp, email, or SMS.</span>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+      <div class="step h-100">
+        <div class="step-head mb-2">
+          <span class="step-no">3</span>
+          <i class="bi bi-check2-circle"></i>
+          <strong>On-time service</strong>
+        </div>
+        <p class="muted">We complete the job in your area — reliably and on schedule.</p>
+        <span class="step-meta">Delivery/service included where applicable.</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End How it works -->
+
+    <!-- End How it works -->
+
+    <!-- ======= Contact Section (kept, lightly refined) ======= -->
+    <section id="contact" class="contact section-contact">
+      <div data-aos="fade-up" style="padding:56px 30px 30px 20px;">
+        <div class="section-title">
+          <h2>Query about more services</h2>
+          <h3>Contact Us</h3>
+        </div>
+      </div>
+
+      <div style="padding:56px 30px 30px 20px;" data-aos="fade-up">
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Locations:</h4>
+                <p>Mcubakazi,<br>Butterworth, 4960</p>
+              </div>
+
+              <div class="open-hours">
+                <i class="bi bi-clock"></i>
+                <h4>Front Desk:</h4>
+                <p>Mon–Fri: 8AM – 10PM (SAST)</p>
+                <p>Sat–Sun: 8AM – 7PM (SAST)</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@propertyx.co.za</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p><span>Tel:</span> +27 47 491 0299</p>
+                <p><span>Cell:</span> +27 64 513 9755</p>
+              </div>
+
+              <div class="social-media">
+                <h4>See Us On</h4>
+                <p>
+                  <a href="https://youtu.be/aUr0mRUJdWU" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="me-3">
+                    <img src="assets/img/icons/facebook_145802.png" alt="Facebook" class="social-icon">
+                  </a>
+                  <a href="https://youtu.be/aUr0mRUJdWU" target="_blank" rel="noopener noreferrer" aria-label="SafariNow" class="me-3">
+                    <img src="assets/img/icons/instagram_2626270.png" alt="SafariNow" class="social-icon">
+                  </a>
+                  <a href="https://youtu.be/aUr0mRUJdWU" target="_blank" rel="noopener noreferrer" aria-label="Hey Bed & Breakfast">
+                    <img src="assets\img\icons\twitter_5968830.png" alt="Hey Bed & Breakfast" class="social-icon">
+                  </a>
+
+                  <a href="https://youtu.be/aUr0mRUJdWU" target="_blank" rel="noopener noreferrer" aria-label="Hey Bed & Breakfast">
+                    <img src="assets\img\icons\youtube_3938026.png" alt="Hey Bed & Breakfast" class="social-icon">
+                  </a>
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="https://formsubmit.co/propertx01@gmail.com" method="POST" role="form" class="php-email-form">
+              <!-- Honeypot -->
+              <input type="text" name="_honey" style="display:none">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name (required)" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email (required)" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="8" placeholder="Tell us about your event (date, location, quantity, extras)"></textarea>
+              </div>
+              <!-- Hidden config -->
+              <div class="form-group mt-3">
+                <input type="hidden" name="_subject" value="PropertyX - Services Query" required>
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting PropertyX. We’ll get back to you soon.">
+                <input type="hidden" name="_next" value="https://propertyyx.co.za/thank_you.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+      <!-- Clean map embed (spam link removed) -->
+      <div id="map" class="embed-map-fixed" aria-label="Location Map">
+        <div class="embed-map-container">
+                  <div id = 'map' class="embed-map-fixed"><div class="embed-map-container"><iframe class="embed-map-frame" loading="lazy" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=-32.322422,%2028.191732+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki retake</a></div><style>.embed-map-fixed{position:relative;text-align:right;width:100%;height:350px;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:350px;}.embed-map-frame{width:100%!important;height:350px!important;}</style></div>
+
+    
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PropertyX</h3>
+              <p>Mcubakazi<br>Butterworth, 4960</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="rooms.html">Our Rooms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html">More Services</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PropertyX</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://intelli-analtix.vercel.app" target="_blank" rel="noopener noreferrer">E-Funda Web</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- WhatsApp FAB -->
+  <a href="https://api.whatsapp.com/send/?phone=27725036405&text&app_absent=0"
+     class="whatsapp-chat d-flex align-items-center justify-content-center"
+     data-bs-toggle="tooltip" data-bs-placement="top" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+     <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+   <script src="assets/js/loader.js"></script>
+
+  <!-- Site JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Init AOS (if not already done globally) -->
+  <script>
+    if (typeof AOS !== 'undefined') { AOS.init({ once: true, duration: 700, easing: 'ease-out-quart' }); }
+  </script>
+</body>
+</html>
