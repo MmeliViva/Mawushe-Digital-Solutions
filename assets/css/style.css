@@ -28,7 +28,7 @@
 .btn-get-started {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3bbcb1;
+  background-color: #1152b3;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -36,9 +36,9 @@
 }
 
 .btn-get-started:hover {
-  background-color: #3bbcb1;
+  background-color: #2436df;
   color: #fff;
-  border: 1px solid #3bbcb1;
+  border: 1px solid hsl(231, 52%, 48%);
 }
 
 
@@ -54,12 +54,12 @@ body {
 }
 
 a {
-  color: #3bbcb1;
+  color: #2957ac;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3bbcb1;
+  color: #2c3bc7;
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ h6 {
   line-height: 24px;
   color: var(--color-default);
   text-align: left;
-  background: #3bbcb1;
+  background: #1a28df;
   box-shadow: none;
   border-radius: 10px;
 }
