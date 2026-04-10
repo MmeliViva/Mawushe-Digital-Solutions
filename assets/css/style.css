@@ -1,8 +1,7 @@
 
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+
+
 
 .hero-container {
   display: flex;
@@ -11,11 +10,22 @@
   min-height: 100vh;
   backdrop-filter: blur(10px); /* Adds a blur effect to the background */
 }
+.hero{
+  background: 
+    linear-gradient(rgba(18, 2, 158, 0), rgb(20, 61, 175)),
+    url('img/gallery/WusheHomePage.jpg') center/cover no-repeat;
+
+  color:white;
+  padding:100px 40px;
+  display:flex;
+  align-items:center;
+}
+
 
 .card {
   text-align: center;
   padding: 20px;
-  background-color: white; /* White background for the card */
+  background-color: rgba(6, 36, 133, 0.493); /* White background for the card */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
 .d-flex-thankyou {
@@ -28,8 +38,8 @@
 .btn-get-started {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1152b3;
-  color: #fff;
+  background-color: #0e32d4;
+  color: #2e4cd1;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -37,7 +47,7 @@
 
 .btn-get-started:hover {
   background-color: #2436df;
-  color: #fff;
+  color: #0d3da5;
   border: 1px solid hsl(231, 52%, 48%);
 }
 
@@ -49,8 +59,8 @@
 
 body {
   font-family: "Poppins",sans-serif ;
-  background: #e9e8e4;
-  color: #fff;
+  background: #2805ee;
+  color: #1729c4;
 }
 
 a {
@@ -146,7 +156,7 @@ h6 {
 
 .faq .accordion-body {
   padding: 20px 40px 30px 45px; /* Adjusted top padding for consistency */
-  background: #3bbcb1; /* Matches your teal */
+  background: #000dbec5; /* Matches your teal */
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -175,8 +185,8 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #3bbcb1;
-  border-bottom-color: #3bbcb1;
+  border-top-color: #1310a0;
+  border-bottom-color: #0a178b;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -387,7 +397,7 @@ h6 {
 #hero-properties {
   width: 100%;
   height: 100vh;
-  background: url("../../PropertyX images/Furnished/Furnished\ propertyX1.jpg") top center;
+  background: url("../../PropertyX images/Furnished/Furnished/propertyX1.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -395,7 +405,7 @@ h6 {
 
 #hero-properties:before {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -704,7 +714,7 @@ h6 {
 
 #topbar .contact-info i {
   font-style: normal;
-  color: #3bbcb1;
+  color: #0a06e0;
 }
 
 #topbar .contact-info i span {
@@ -718,7 +728,7 @@ h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #4dffff;
+  color: #0f01dd;
   background: #00535361;
   border-radius: 6px;
   padding: 2px 4px;
@@ -869,7 +879,7 @@ h6 {
 --------------------------------------------------------------*/
 .view-products-btn {
   margin: 0 0 0 15px;
-  border: 2px solid #3bbcb1;
+  border: 2px solid #0206dd;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -881,7 +891,7 @@ h6 {
 }
 
 .view-products-btn:hover {
-  background: #3bbcb1;
+  background: #0602d8;
   color: #fff;
 }
 
@@ -971,7 +981,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #3bbcb1;
+  color: #0501d8;
 }
 
 .navbar .dropdown ul {
@@ -1006,7 +1016,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #3bbcb1;
+  color: #1000e9;
 }
 
 .navbar .dropdown:hover>ul {
@@ -1103,7 +1113,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #3bbcb1;
+  color: #0703d8;
 }
 
 .navbar-mobile .getstarted,
@@ -1138,7 +1148,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #3bbcb1;
+  color: #020597;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -1212,7 +1222,7 @@ h6 {
 
 
 #hero h1 span {
-  color: #06b5a7;
+  color: #0300d1;
 }
 
 #hero h2 {
@@ -1239,12 +1249,12 @@ h6 {
   transition: 0.3s;
   line-height: 1;
   color: white;
-  border: 2px solid #3bbcb1;
+  border: 2px solid #0401cc;
 }
 
 #hero .btn-menu:hover,
 #hero .btn-book:hover {
-  background: #3bbcb1;
+  background: #1104ca;
   color: #fff;
 }
 
@@ -1255,7 +1265,7 @@ h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#3bbcb1 50%, rgba(205, 164, 94, 0.4) 52%);
+  background: radial-gradient(#0f02ce 50%, rgba(205, 164, 94, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -1296,7 +1306,7 @@ h6 {
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid #3bbcb1;
+  border-left: 15px solid #0501d1;
   transform: scale(20);
 }
 
@@ -1696,7 +1706,7 @@ h6 {
   border-radius: 4px;
   transition: 0.3s;
   color: #ffffff;
-  background: #35b2aa;
+  background: #000ed3;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.195);
   border: none;
 }
@@ -1814,7 +1824,7 @@ h6 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #3bbcb1;
+  color: #0014c7;
   background: rgba(255, 255, 255, 0.8);
   width: 40px;
   height: 40px;
@@ -1846,7 +1856,7 @@ h6 {
 
 .thumbnail-slider .swiper-slide-thumb-active {
   opacity: 1;
-  border: 2px solid #3bbcb1; /* Highlight active thumbnail */
+  border: 2px solid #020fc7; /* Highlight active thumbnail */
 }
 
 .thumbnail-img {
@@ -1944,7 +1954,7 @@ h6 {
 
 .details-info__item {
   font-size: 1rem;
-  color: #3bbcb1;
+  color: #0411c9;
   margin-bottom: 10px;
 }
 
@@ -2086,7 +2096,7 @@ section {
   font-size: 32px;
   font-weight: 100;
   font-family: 'Lucida Handwriting';
-  color: #3bbcb1;
+  color: #0417bd;
 }
 
 /*--------------------------------------------------------------
@@ -2468,8 +2478,8 @@ section {
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
-  color: #3bbcb1;
-  border: 2px solid #3bbcb1;
+  color: #2835ad;
+  border: 2px solid #2623c7;
 }
 
 .our-rooms .btn-menu:hover {
