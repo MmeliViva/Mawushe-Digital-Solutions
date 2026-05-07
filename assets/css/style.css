@@ -1,25 +1,15 @@
 
 
 
-
-
-.hero-container {
+/*.hero-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   backdrop-filter: blur(10px); /* Adds a blur effect to the background */
-}
-.hero{
-  background: 
-    linear-gradient(rgba(18, 2, 158, 0), rgb(20, 61, 175)),
-    url('img/gallery/WusheHomePage.jpg') center/cover no-repeat;
 
-  color:white;
-  padding:100px 40px;
-  display:flex;
-  align-items:center;
 }
+
 
 
 .card {
@@ -38,7 +28,7 @@
 .btn-get-started {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0e32d4;
+  background-color: #c91616;
   color: #2e4cd1;
   text-decoration: none;
   border-radius: 5px;
@@ -59,8 +49,8 @@
 
 body {
   font-family: "Poppins",sans-serif ;
-  background: #2805ee;
-  color: #1729c4;
+  background: #2DA3FF;
+  color: #2d2d2d;
 }
 
 a {
@@ -670,12 +660,12 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #3bbcb1;
+  color: #2DA3FF;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #3bbcb1;
+  background: #2DA3FF;
   color: #1a1814;
 }
 
@@ -820,7 +810,7 @@ h6 {
 .mobile-nav-toggle {
   margin-left: auto; /* Push toggle to right */
   display: block !important; /* Ensure it's visible */
-  color: #000;
+  color: #2DA3FF;
   font-size: 24px;
   cursor: pointer;
   z-index: 999999999;  

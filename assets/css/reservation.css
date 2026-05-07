@@ -94,7 +94,7 @@
   /* Button styling */
   button {
     padding: 10px 20px;
-    background-color: #2fa39c; /* Professional blue */
+    background-color: #2DA3FF; /* Professional blue */
     color: white;
     border: none;
     border-radius: 4px;
@@ -104,7 +104,7 @@
   }
   
   button:hover {
-    background-color: #2fa39c; /* Darker blue on hover */
+    background-color: #2DA3FF; /* Darker blue on hover */
   }
   
   /* Placeholder styling */
@@ -114,7 +114,7 @@
   
   /* Focus states for accessibility and interaction */
   input:focus, select:focus {
-    border-color: #2fa39c; /* Matches button color */
+    border-color: #2DA3FF; /* Matches button color */
     outline: none; /* Removes default outline */
   }
   
