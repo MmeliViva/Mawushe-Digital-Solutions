@@ -66,25 +66,16 @@ a
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BedAndBreakfast",
-    "name": "PropertyX",
-    "url": "https://https://property-x-b.vercel.app/index.html/",
-    "logo": "https://www.bibbysbnb.co.za/assets/img/icons/bibbys-logo-small.png",
-    "image": "https://www.bibbysbnb.co.za/assets/img/gallery/garden/bibby_garden33.jpg",
-    "description": "Experience comfort and luxury at Bibby’s.",
+    "@type": "ProfessionalService",
+    "name": "Mawushe Digital Solutions",
+    "url": "https://mawushe-digital-solutions-7plr.vercel.app/",
+    "logo": "https://mawushe-digital-solutions-7plr.vercel.app/assets/img/icons/WusheLogo.jpeg",
+    "description": "Managed IT services, Microsoft 365 solutions, cloud backup & security for SMEs in South Africa.",
+    "telephone": "+27725036405",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mcubakazi",
-      "addressLocality": "Butterworth",
-      "addressRegion": "EC",
-      "postalCode": "4960",
       "addressCountry": "ZA"
-    },
-    "telephone": "+27-47-491-0299",
-    "priceRange": "R500 - R1500",
-    "checkinTime": "15:00",
-    "checkoutTime": "10:00",
-    "paymentAccepted": "Cash, Credit Card",
+    }
   }
   </script>
 
@@ -95,6 +86,10 @@ a
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Tailwind (Play CDN) + shared base styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/css/base.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   
@@ -114,46 +109,35 @@ a
 </head>
 
 <body>
+  <a class="skip-link sr-only-focusable" href="#main">Skip to main content</a>
 
 
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <!-- Logo on the left -->
-      <div class="logo-container d-flex flex-column align-Qitems-center">
-        <a href="index.html" class="logo me-auto me-lg-0">
-          <img src="assets\img\icons\WusheLogo.jpeg"
-            style="background-color: rgba(253, 253, 253, 0); border-radius: 15px;padding: 2px;" alt="Mawushe Digital Solutions"
-            class="header-img">
+  <header id="header" class="w-full fixed top-0 z-50 bg-transparent">
+    <div class="container-sm flex items-center justify-between py-4">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <img src="assets/img/icons/WusheLogo.jpeg" alt="Mawushe logo" class="w-12 h-12 rounded-md bg-white/5 p-1">
+          <span class="text-white font-semibold tracking-tight">Mawushe</span>
         </a>
-        <!-- <h4 class="logo-text phone-off">
-          <a href="index.html">PropertyX</a>
-        </h4> -->
       </div>
-  
-      <!-- Navbar and toggle -->
-      <div class="nav-container">
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li> 
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#Servies.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#Servies.html">Microsoft365Solutions</a></li>
-                <li><a href="#Servics.html">Cloud Backup & Security</a></li>
-                <li><a href="#Servies.html">managed IT services</a></li>
-                <li><a href="#Servies.html">Email & Migration</a></li>
-                <li><a href="Servces.html">Web services</a></li>
-                
-              </ul>  
-            </li>
-            <!--<li><a class="nav-link scrollto" href="#about1">Attractions</a></li>-->
-            <li><a class="nav-link scrollto" href="#Blog">Blog</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact us</a></li>
-            <li><button>Send Message</button></li>
+
+      <div class="flex items-center gap-4">
+        <nav id="navbar" class="navbar hidden md:flex" role="navigation" aria-label="Main navigation">
+          <ul class="flex items-center gap-6 text-sm">
+            <li><a class="text-slate-200 hover:text-white" href="index.html">Home</a></li>
+            <li><a class="text-slate-300 hover:text-white" href="pages/services.html">Services</a></li>
+            <li><a class="text-slate-300 hover:text-white" href="pages/about.html">About</a></li>
+            <li><a class="text-slate-300 hover:text-white" href="pages/contact.html">Contact</a></li>
           </ul>
         </nav>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <a href="pages/contact.html" class="hidden md:inline-flex btn-primary">Get a Quote</a>
+
+        <button class="mobile-nav-toggle md:hidden p-2" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -168,49 +152,36 @@ a
           </div>
         </div>
 
-<section id="hero" class="hero-home d-flex align-items-center" aria-label="Hero">
-  <!-- Background image + gradient overlay-->
-  <div class="hero-bg" role="img" aria-label="Wushe HomePage"></div>
+<section id="hero" class="relative min-h-[72vh] flex items-center" aria-label="Hero">
+  <div class="absolute inset-0 bg-[linear-gradient(120deg,rgba(2,6,23,0.65),rgba(7,20,48,0.65)),url('assets/img/gallery/WusheHomePage.jpg')] bg-center bg-cover"></div>
 
-  <div class="container position-relative">
-    <div class="row align-items-center g-4">
-      <!---- Left: Glass card with content-->
-      <div class="col-lg-8" data-aos="fade-up">
-        <div class="hero-card">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <img src="assets\img\icons\WusheLogo.jpeg"class="hero-logo" alt="Mawushe digital Solutions logo">
-            <span class="brand-tag">Mawushe digital Solutions</span>
-          </div>
-
-          <h1 class="hero-title">
-           Empowering Your Business with Microsoft 365 & IT Solutions <span class="text-accent">— on your terms.</span>
-          </h1>
-          <p class="hero-lead">
-           Affordable Cloud Services & IT Support for African Businesses 
-          </p>
-
-          <div class="hero-ctas">
-            <a href="#contact" class="btn-accent btn-lg">Get Started</a>
-            <a href="#map" class="btn-ghost btn-lg">Learn More</a>
-            <!--<a href="https://youtu.be/aUr0mRUJdWU" class="glightbox hero-play-inline" aria-label="Watch video">
-              <i class="bi bi-play-fill"></i> Watch 30s
-            </a>-->
-          </div>
-
-          <ul class="hero-badges list-unstyled d-flex flex-wrap gap-3 mt-3">
-            <li><i class="bi bi-shield-check"></i> Verified listings</li>
-            <li><i class="bi bi-calendar2-week"></i> Flexible terms</li>
-            <li><i class="bi bi-whatsapp"></i> WhatsApp</li>
-          </ul>
+  <div class="container-sm relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-20">
+    <div class="lg:col-span-7">
+      <div class="glass p-8 lg:p-12 max-w-3xl">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="assets/img/icons/WusheLogo.jpeg" alt="logo" class="w-14 h-14 rounded-md bg-white/5 p-1">
+          <span class="px-3 py-1 rounded-full text-sm font-semibold text-slate-900 bg-accent/90" style="background:var(--accent);">Mawushe Digital</span>
         </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">Empower your business with Microsoft 365 & secure IT services</h1>
+        <p class="mt-4 text-slate-300">Enterprise-grade security, cloud backup and dependable IT support tailored for African SMEs.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="pages/contact.html" class="btn-primary">Get a Quote</a>
+          <a href="#how-it-works" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/5">How it works</a>
+        </div>
+
+        <ul class="mt-6 flex flex-wrap gap-4 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><i class="bi bi-shield-check text-accent"></i> Security-first</li>
+          <li class="flex items-center gap-2"><i class="bi bi-gear text-accent"></i> Proactive management</li>
+          <li class="flex items-center gap-2"><i class="bi bi-people text-accent"></i> Local support</li>
+        </ul>
       </div>
+    </div>
 
-      <!-- Right: Showcase image with floating play button -->
-      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="150">
-        <div >
-          <img src="assets/img/gallery/WusheHomePage.jpg" alt=" " class="hero-photo" loading="lazy">
-          <!--<a href="https://youtu.be/aUr0mRUJdWU" class="glightbox play-fab" aria-label="Play property video"></a>-->
-        </div>
+    <div class="lg:col-span-5 flex justify-center">
+      <div class="rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm">
+        <img src="assets/img/gallery/WusheHomePage.jpg" alt="Showcase" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
@@ -218,28 +189,34 @@ a
 
   <main id="main">
 
-    <section id="services" style="padding: 50px; background: #f5f7fa; text-align: center;">
-  <h2>Our Key Services</h2>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+    <section id="services" class="py-12 bg-slate-900 text-slate-100" data-aos="fade-up">
+      <div class="container-sm text-center">
+        <h2 class="text-3xl font-extrabold">Our Key Services</h2>
+        <p class="text-slate-300 mt-2 max-w-2xl mx-auto">Practical, secure and affordable IT services that help SMEs scale — from Microsoft 365 migrations to fully managed support.</p>
 
-    <div style="background: #0d3b66; color: white; padding: 20px; width: 220px; border-radius: 5px;">
-      <h4>Microsoft 365 Solutions</h4>
-    </div>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
+          <article class="glass p-6" role="listitem">
+            <h3 class="text-xl font-semibold">Microsoft 365 Solutions</h3>
+            <p class="mt-2 text-slate-300 text-sm">Migrations, license optimisation, Teams adoption, governance and end-user training.</p>
+          </article>
 
-    <div style="background: #0d3b66; color: white; padding: 20px; width: 220px; border-radius: 5px;">
-      <h4>Cloud Backup & Security</h4>
-    </div>
+          <article class="glass p-6" role="listitem">
+            <h3 class="text-xl font-semibold">Cloud Backup & Security</h3>
+            <p class="mt-2 text-slate-300 text-sm">Automated backups, ransomware protection, and recovery planning for business continuity.</p>
+          </article>
 
-    <div style="background: #0d3b66; color: white; padding: 20px; width: 220px; border-radius: 5px;">
-      <h4>Managed IT Services</h4>
-    </div>
+          <article class="glass p-6" role="listitem">
+            <h3 class="text-xl font-semibold">Managed IT Services</h3>
+            <p class="mt-2 text-slate-300 text-sm">Proactive monitoring, helpdesk support, patching and remote/onsite engineering.</p>
+          </article>
 
-    <div style="background: #0d3b66; color: white; padding: 20px; width: 220px; border-radius: 5px;">
-      <h4>Email & Migration</h4>
-    </div>
-
-  </div>
-</section>
+          <article class="glass p-6" role="listitem">
+            <h3 class="text-xl font-semibold">Email & Migration</h3>
+            <p class="mt-2 text-slate-300 text-sm">Seamless migrations to Exchange Online with minimal downtime and secure mailflow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
 
 <section id="why-us" style="padding: 50px; text-align: center;">
@@ -333,6 +310,13 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+
+/* Scrolled header state */
+.header-scrolled{
+  background: linear-gradient(90deg, rgba(13,59,102,0.96), rgba(29,111,165,0.96));
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+  backdrop-filter: saturate(120%) blur(6px);
 }
 
 header h2{
@@ -505,65 +489,84 @@ footer{
 </head>
 
 <body>
-<!-- SECTION 1: SOCIAL PROOF (Clients + Testimonials) -->
-<section class="social-proof" style="padding: 60px 20px; background: #fff; text-align: center;">
-  <div style="max-width: 1100px; margin: auto;">
-    <h2 style="color: #333; margin-bottom: 30px;">Trusted by Leading Companies</h2>
-    
-    <!-- Client Logos -->
-    <div class="client-logos" style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; opacity: 0.6; margin-bottom: 50px;">
-      <span style="font-weight: bold; font-size: 1.2rem;">CLIENT A</span>
-      <span style="font-weight: bold; font-size: 1.2rem;">CLIENT B</span>
-      <span style="font-weight: bold; font-size: 1.2rem;">CLIENT C</span>
-    </div>
+<!-- RESULTS: Key metrics to build trust -->
+<section id="results" class="py-12 bg-slate-900 text-slate-100" data-aos="fade-up">
+  <div class="container-sm text-center">
+    <h2 class="text-3xl font-extrabold">Proven Results</h2>
+    <p class="text-slate-300 mt-2 max-w-2xl mx-auto">We deliver measurable outcomes for SMEs — lower downtime, faster onboarding and secure cloud operations.</p>
 
-    <!-- Success Stories (Moved here) -->
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-      <div style="flex: 1; min-width: 300px; background: #f0f7ff; padding: 25px; border-radius: 8px; text-align: left; border-left: 5px solid #00a4ef;">
-        <p style="font-style: italic; color: #444;">"Great IT support team! They handled our transition perfectly."</p>
-        <strong style="display: block; margin-top: 10px; color: #00a4ef;">— IT Director, Tech Corp</strong>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="glass p-6 text-center">
+        <div class="text-4xl font-bold text-white">99.9%</div>
+        <div class="text-slate-300 mt-1">Average uptime delivered</div>
       </div>
-      <div style="flex: 1; min-width: 300px; background: #f0f7ff; padding: 25px; border-radius: 8px; text-align: left; border-left: 5px solid #00a4ef;">
-        <p style="font-style: italic; color: #444;">"Seamless Microsoft 365 migration. Minimal downtime, maximum results."</p>
-        <strong style="display: block; margin-top: 10px; color: #00a4ef;">— Operations Manager, SME Ltd</strong>
+
+      <div class="glass p-6 text-center">
+        <div class="text-4xl font-bold text-white">150+</div>
+        <div class="text-slate-300 mt-1">SME migrations completed</div>
+      </div>
+
+      <div class="glass p-6 text-center">
+        <div class="text-4xl font-bold text-white"><span class="text-accent">30%</span></div>
+        <div class="text-slate-300 mt-1">Average productivity gain for clients</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2: INTERACTIVE (Blog + Contact Side-by-Side) -->
-<section class="interaction-zone" style="background: #f8f9fa; padding: 60px 20px;">
-  <div style="max-width: 1100px; margin: auto; display: flex; gap: 40px; flex-wrap: wrap;">
-    
-    <!-- Latest Insights (Blog) -->
-    <div class="blog-box" style="flex: 1; min-width: 300px;">
-      <h3 style="color: #333; margin-bottom: 20px; font-size: 1.8rem;">Latest Insights</h3>
-      <ul style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ddd;">
-          <a href="#" style="color: #00a4ef; text-decoration: none; font-weight: 600; font-size: 1.1rem;">How to Secure Microsoft 365</a>
-          <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">Protect your identity and data with MFA and modern security.</p>
-        </li>
-        <li style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ddd;">
-          <a href="#" style="color: #00a4ef; text-decoration: none; font-weight: 600; font-size: 1.1rem;">Cloud Backup for SMEs</a>
-          <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">Why having your data in the cloud isn't the same as a backup.</p>
-        </li>
-      </ul>
+<!-- HOW IT WORKS: Simple 3-step process -->
+<section id="how-it-works" class="py-12 bg-slate-800 text-slate-100" data-aos="fade-up">
+  <div class="container-sm text-center">
+    <h2 class="text-3xl font-extrabold">How It Works</h2>
+    <p class="text-slate-300 mt-2 max-w-2xl mx-auto">A practical, low-risk path to modern IT that minimises disruption and maximises value.</p>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold">1. Assess</h3>
+        <p class="text-slate-300 mt-2">We audit your environment and recommend an actionable migration or optimisation plan.</p>
+      </div>
+
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold">2. Migrate & Secure</h3>
+        <p class="text-slate-300 mt-2">Planned migrations with security hardening and user training for smooth adoption.</p>
+      </div>
+
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold">3. Manage & Improve</h3>
+        <p class="text-slate-300 mt-2">Ongoing monitoring, support and quarterly improvement cycles tied to business goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST: logos + testimonials -->
+<section id="trust" class="py-12 bg-slate-900 text-slate-100" data-aos="fade-up">
+  <div class="container-sm text-center">
+    <h2 class="text-3xl font-extrabold">Trusted by growing businesses</h2>
+    <p class="text-slate-300 mt-2 max-w-2xl mx-auto">We partner with SMEs across industries — here are a few success stories.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+      <div class="glass p-6">
+        <h4 class="font-semibold">Client: Tech Corp</h4>
+        <p class="text-slate-300 mt-2 italic">"Migration completed ahead of schedule with zero downtime — highly recommended."</p>
+      </div>
+
+      <div class="glass p-6">
+        <h4 class="font-semibold">Client: SME Ltd</h4>
+        <p class="text-slate-300 mt-2 italic">"Support response times improved and our IT costs dropped by 18%."</p>
+      </div>
+
+      <div class="glass p-6">
+        <h4 class="font-semibold">Client: Retail Group</h4>
+        <p class="text-slate-300 mt-2 italic">"Secure backup and recovery saved us during an attempted ransomware incident."</p>
+      </div>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-box" style="flex: 1.2; min-width: 300px; background: #333; color: white; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <h3 style="margin-bottom: 10px;">Get in Touch</h3>
-      <p style="color: #bbb; margin-bottom: 25px; font-size: 0.9rem;">Ready to upgrade? Send us a message.</p>
-      
-      <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-        <input type="text" placeholder="Name" style="padding: 12px; border-radius: 4px; border: none; grid-column: 1 / 2;">
-        <input type="email" placeholder="Email" style="padding: 12px; border-radius: 4px; border: none; grid-column: 2 / 3;">
-        <input type="text" placeholder="Phone" style="padding: 12px; border-radius: 4px; border: none; grid-column: 1 / 3;">
-        <textarea placeholder="Your Message" style="padding: 12px; border-radius: 4px; border: none; grid-column: 1 / 3; height: 80px;"></textarea>
-        <button style="grid-column: 1 / 3; padding: 15px; background: #00a4ef; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Send Message</button>
-      </form>
+    <div class="mt-10 flex justify-center gap-8 items-center flex-wrap opacity-70">
+      <img src="assets/img/icons/client1.png" alt="Client 1" class="h-10">
+      <img src="assets/img/icons/client2.png" alt="Client 2" class="h-10">
+      <img src="assets/img/icons/client3.png" alt="Client 3" class="h-10">
     </div>
-
   </div>
 </section>
 
@@ -677,8 +680,56 @@ footer{
 
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Mawushe Digital Solutions | Privacy Policy | Terms of Service</p>
+<!-- FINAL CTA -->
+<section id="final-cta" class="py-12 bg-gradient-to-r from-slate-900 to-slate-800 text-slate-100" data-aos="zoom-in">
+  <div class="container-sm text-center">
+    <h2 class="text-3xl font-extrabold">Ready to modernise your IT?</h2>
+    <p class="text-slate-300 mt-2 max-w-2xl mx-auto">Book a free 30-minute consultation to review your Microsoft 365, backups and security posture.</p>
+    <div class="mt-6 flex justify-center gap-4 flex-wrap">
+      <a href="pages/contact.html" class="btn-primary">Get a Quote</a>
+      <a href="https://calendly.com/" class="glass p-3 rounded-md" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-300">
+  <div class="container-sm py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div>
+      <a href="index.html" class="text-white font-bold text-lg">Mawushe Digital Solutions</a>
+      <p class="mt-3 text-sm text-slate-400">Managed IT services & Microsoft 365 solutions for SMEs across Africa.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-white">Products & Services</h4>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="pages/services.html" class="text-slate-300 hover:text-white">Services</a></li>
+        <li><a href="pages/about.html" class="text-slate-300 hover:text-white">About</a></li>
+        <li><a href="pages/contact.html" class="text-slate-300 hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-white">Contact</h4>
+      <p class="mt-3 text-sm">Phone: +27 72 503 6405</p>
+      <p class="text-sm">Email: hello@mawushe.digital</p>
+      <div class="mt-4 flex items-center gap-3">
+        <a href="#" class="text-slate-300 hover:text-white"><i class="bi bi-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+        <a href="#" class="text-slate-300 hover:text-white"><i class="bi bi-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+        <a href="#" class="text-slate-300 hover:text-white"><i class="bi bi-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-slate-800 py-4">
+    <div class="container-sm flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-sm text-slate-500">© 2026 Mawushe Digital Solutions. All rights reserved.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="/privacy" class="text-slate-400 hover:text-white">Privacy</a>
+        <a href="/terms" class="text-slate-400 hover:text-white">Terms</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
@@ -868,6 +919,53 @@ footer{
   <script src="assets/js/all-rooms.js"></script>
   <script src="assets/js/loader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    // Initialize AOS (scroll animations)
+    if (window.AOS) {
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: 'ease-out-cubic'
+      });
+    }
+
+    // Sticky header visual state (adds/removes .header-scrolled)
+    (function(){
+      const header = document.getElementById('header');
+      if(!header) return;
+      const scrolledClass = 'header-scrolled';
+
+      const onScroll = () => {
+        if(window.scrollY > 10) header.classList.add(scrolledClass);
+        else header.classList.remove(scrolledClass);
+      };
+
+      // run once and attach listener
+      onScroll();
+      window.addEventListener('scroll', onScroll, {passive: true});
+    })();
+
+    // Mobile nav toggle behaviour
+    (function(){
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      const nav = document.getElementById('navbar');
+      if(!toggle || !nav) return;
+
+      const setExpanded = (expanded) => {
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        if(expanded) nav.classList.add('navbar-mobile'); else nav.classList.remove('navbar-mobile');
+      };
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        setExpanded(!expanded);
+      });
+
+      // close mobile nav when a link is clicked
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setExpanded(false)));
+    })();
+  </script>
 
 </body>
 
