@@ -350,3 +350,51 @@ document.addEventListener("DOMContentLoaded", function () {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+
+// Site-wide mobile nav handlers (supports #mobile-toggle, #mobile-close, #mobile-nav)
+(function () {
+  const openBtn = document.getElementById('mobile-toggle');
+  const closeBtn = document.getElementById('mobile-close');
+  const mobileNav = document.getElementById('mobile-nav');
+  let lastFocused = null;
+
+  if (!mobileNav || !openBtn) return;
+
+  function openNav() {
+    lastFocused = document.activeElement;
+    mobileNav.classList.remove('hidden');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    // focus first focusable link inside mobile nav
+    const firstLink = mobileNav.querySelector('a, button');
+    if (firstLink) firstLink.focus();
+    openBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    mobileNav.classList.add('hidden');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    openBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (mobileNav.classList.contains('hidden')) openNav(); else closeNav();
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', (e) => { e.preventDefault(); closeNav(); });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+      closeNav();
+    }
+  });
+
+  // Close when clicking outside the menu inner area
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target === mobileNav) closeNav();
+  });
+})();
