@@ -43,34 +43,19 @@
 
 
 
-.justified-text {
-  text-align: justify;
-}
+.justified-text{text-align:justify}
 
-body {
-  font-family: "Poppins",sans-serif ;
-  background: #2DA3FF;
-  color: #2d2d2d;
-}
+/* Reset conflicting globals so base tokens apply */
+body{background:var(--dark);color:#e6eef8;font-family:Inter,system-ui,Arial,sans-serif}
 
-a {
-  color: #2957ac;
-  text-decoration: none;
-}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
 
-a:hover {
-  color: #2c3bc7;
-  text-decoration: none;
-}
+h1,h2,h3,h4,h5,h6{font-family:Inter,system-ui,Arial,sans-serif}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'poppins';
-}
+/* Hero helper for fintech layout: left content + right visual */
+.hero-grid{display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
 
 
 /*--------------------------------------------------------------

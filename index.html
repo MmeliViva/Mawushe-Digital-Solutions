@@ -129,7 +129,7 @@ a
   <a class="skip-link sr-only-focusable" href="#main">Skip to main content</a>
 
 
-  <header id="header" class="sticky top-0 z-50 backdrop-blur bg-gradient-to-r from-slate-900/60 to-slate-800/60 border-b border-slate-800">
+  <header id="header" class="sticky top-0 z-50 bg-gradient-to-r from-slate-900/60 to-slate-800/60 border-b border-slate-800">
     <div class="container-sm flex items-center justify-between py-3">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/icons/WusheLogo.jpeg" alt="Mawushe logo" class="w-12 h-12 rounded-lg bg-white/10 p-1">
@@ -153,7 +153,7 @@ a
     </div>
 
     <!-- Mobile nav overlay -->
-    <div id="mobile-nav" aria-hidden="true" class="fixed inset-0 z-40 bg-slate-900/80 backdrop-blur-sm hidden">
+    <div id="mobile-nav" aria-hidden="true" class="fixed inset-0 z-40 bg-slate-900/80 hidden">
       <div class="h-full container-sm flex flex-col justify-center items-center gap-6">
         <a href="index.html" class="text-white text-2xl font-semibold">Home</a>
         <a href="pages/services.html" class="text-slate-100 text-xl">Services</a>
@@ -179,57 +179,58 @@ a
   <div class="absolute inset-0 bg-[url('assets/img/gallery/WusheHomePage.jpg')] bg-center bg-cover opacity-30 -z-10"></div>
 
   <div class="container-sm mx-auto py-20">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <!-- Left: Glass card -->
-      <div class="lg:col-span-7" data-aos="fade-up">
-        <div class="glass backdrop-blur-lg p-8 md:p-12 rounded-2xl shadow-2xl">
-          <div class="flex items-center gap-4">
-            <img src="assets/img/icons/WusheLogo.jpeg" alt="Mawushe logo" class="w-14 h-14 rounded-lg bg-white/5 p-1">
-            <div>
-              <p class="text-sm text-slate-300 font-medium">Mawushe Digital Solutions</p>
-              <p class="text-xs text-slate-400">Managed IT • Microsoft 365 • Cloud Security</p>
-            </div>
+    <div class="hero-grid">
+      <div>
+        <p class="text-sm text-slate-300 font-medium">Mawushe Digital Solutions</p>
+        <h1 class="mt-6 text-3xl md:text-4xl font-extrabold leading-tight">Enterprise IT, built for SMEs <span class="text-accent">— secure, compliant, dependable.</span></h1>
+
+        <p class="mt-4 text-slate-300 max-w-2xl">We deliver Microsoft 365 migrations, continuous managed services and cloud backup designed for African businesses seeking fintech-grade reliability and security.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="pages/contact.html" class="cta-primary">Get a Quote</a>
+          <a href="#how-it-works" class="inline-flex items-center border border-white/20 text-white px-4 py-3 rounded-lg">How it works</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+          <div>
+            <div class="text-2xl font-bold">99.9%</div>
+            <div class="text-xs text-slate-300">Uptime</div>
           </div>
-
-          <h1 class="mt-6 text-3xl md:text-4xl font-extrabold leading-tight">Enterprise IT, built for SMEs<span class="text-accent"> — secure, compliant, dependable.</span></h1>
-
-          <p class="mt-4 text-slate-300 max-w-2xl">We deliver Microsoft 365 migrations, continuous managed services and cloud backup designed for African businesses seeking fintech-grade reliability and security.</p>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="pages/contact.html" class="inline-flex items-center bg-accent text-slate-900 px-5 py-3 rounded-lg font-semibold shadow hover:brightness-95">Get a Quote</a>
-            <a href="#how-it-works" class="inline-flex items-center border border-white/20 text-white px-4 py-3 rounded-lg">How it works</a>
+          <div>
+            <div class="text-2xl font-bold">150+</div>
+            <div class="text-xs text-slate-300">Migrations</div>
           </div>
-
-          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
-            <div>
-              <div class="text-2xl font-bold">99.9%</div>
-              <div class="text-xs text-slate-300">Uptime</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold">150+</div>
-              <div class="text-xs text-slate-300">Migrations</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold">30%</div>
-              <div class="text-xs text-slate-300">Avg. productivity</div>
-            </div>
+          <div>
+            <div class="text-2xl font-bold">30%</div>
+            <div class="text-xs text-slate-300">Avg. productivity</div>
           </div>
         </div>
       </div>
 
-      <!-- Right: Dashboard mockup -->
-      <div class="lg:col-span-5" data-aos="zoom-in" data-aos-delay="150">
-        <div class="relative mx-auto max-w-md">
-          <div class="rounded-2xl overflow-hidden shadow-2xl">
-            <img src="assets/img/gallery/WusheHomePage.jpg" alt="Dashboard screenshot" class="w-full h-72 object-cover">
-          </div>
-          <div class="absolute -bottom-6 left-6 glass p-3 rounded-xl shadow-lg flex items-center gap-3">
-            <div class="w-10 h-10 rounded-md bg-accent/90 flex items-center justify-center font-bold text-slate-900">Wd</div>
-            <div>
-              <div class="text-sm font-semibold">Live Monitoring</div>
-              <div class="text-xs text-slate-300">All systems nominal</div>
-            </div>
-          </div>
+      <div>
+        <div class="rounded-xl p-6" style="background:linear-gradient(180deg,rgba(14,21,34,0.55),rgba(2,6,23,0.35));border:1px solid rgba(255,255,255,0.03)">
+          <!-- Abstract fintech visual (SVG) -->
+          <svg width="100%" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="600" height="360" rx="12" fill="url(#g)"/>
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#071021" stop-opacity="0.6" />
+                <stop offset="1" stop-color="#0a1520" stop-opacity="0.3" />
+              </linearGradient>
+            </defs>
+            <g stroke="rgba(0,179,179,0.12)" stroke-width="2">
+              <path d="M60 260 L180 180 L300 220 L420 140 L540 200" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="60" cy="260" r="6" fill="#00b3b3" />
+              <circle cx="180" cy="180" r="6" fill="#00b3b3" />
+              <circle cx="300" cy="220" r="6" fill="#00b3b3" />
+              <circle cx="420" cy="140" r="6" fill="#00b3b3" />
+              <circle cx="540" cy="200" r="6" fill="#00b3b3" />
+            </g>
+            <g opacity="0.9">
+              <rect x="26" y="26" width="120" height="72" rx="8" fill="#071021" stroke="#0ea5a5" stroke-opacity="0.06"/>
+              <rect x="160" y="40" width="280" height="120" rx="8" fill="#071021" stroke="#0ea5a5" stroke-opacity="0.04"/>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
@@ -244,7 +245,7 @@ a
         <p class="text-slate-300 mt-2 max-w-2xl mx-auto">Practical, secure and affordable IT services that help SMEs scale — from Microsoft 365 migrations to fully managed support.</p>
 
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
-          <article class="glass p-6 flex flex-col gap-3" role="listitem" aria-label="Microsoft 365 Solutions">
+          <article class="surface p-6 flex flex-col gap-3" role="listitem" aria-label="Microsoft 365 Solutions">
             <div class="flex items-center gap-3">
               <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" fill="currentColor"/></svg>
               <h3 class="text-xl font-semibold">Microsoft 365 Solutions</h3>
@@ -252,7 +253,7 @@ a
             <p class="mt-2 text-slate-300 text-sm">Migrations, license optimisation, Teams adoption, governance and end-user training.</p>
           </article>
 
-          <article class="glass p-6 flex flex-col gap-3" role="listitem" aria-label="Cloud Backup & Security">
+          <article class="surface p-6 flex flex-col gap-3" role="listitem" aria-label="Cloud Backup & Security">
             <div class="flex items-center gap-3">
               <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7v1H4a2 2 0 000 4h16a2 2 0 000-4h-1V9a7 7 0 00-7-7z" fill="currentColor"/></svg>
               <h3 class="text-xl font-semibold">Cloud Backup & Security</h3>
@@ -260,7 +261,7 @@ a
             <p class="mt-2 text-slate-300 text-sm">Automated backups, ransomware protection, and recovery planning for business continuity.</p>
           </article>
 
-          <article class="glass p-6 flex flex-col gap-3" role="listitem" aria-label="Managed IT Services">
+          <article class="surface p-6 flex flex-col gap-3" role="listitem" aria-label="Managed IT Services">
             <div class="flex items-center gap-3">
               <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l3 6 6 .5-4.5 4 1 6L12 16l-5.5 3.5 1-6L3 8.5 9 8 12 2z" fill="currentColor"/></svg>
               <h3 class="text-xl font-semibold">Managed IT Services</h3>
@@ -268,7 +269,7 @@ a
             <p class="mt-2 text-slate-300 text-sm">Proactive monitoring, helpdesk support, patching and remote/onsite engineering.</p>
           </article>
 
-          <article class="glass p-6 flex flex-col gap-3" role="listitem" aria-label="Email & Migration">
+          <article class="surface p-6 flex flex-col gap-3" role="listitem" aria-label="Email & Migration">
             <div class="flex items-center gap-3">
               <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8l10 6 10-6v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8z" fill="currentColor"/></svg>
               <h3 class="text-xl font-semibold">Email & Migration</h3>

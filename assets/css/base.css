@@ -2,10 +2,11 @@
    Uses Tailwind utility classes (via CDN) for rapid styling.
 */
 :root{
-  --primary:#005e5e;
+  --primary:#0ea5a5;
   --accent:#00b3b3;
   --dark:#0a0f0f;
-  --nav-bg: rgba(13,59,102,0.55);
+  --nav-bg: rgba(2,6,23,0.6);
+  --glow: rgba(0,179,179,0.14);
 }
 
 /* Basic page defaults */
@@ -20,13 +21,12 @@ body{
   -webkit-font-feature-settings: "cv02", "cv03";
 }
 
-/* Glass surface helper */
-.glass{
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 14px;
+/* Surface helper: thin bordered surfaces (no blur) */
+.surface{
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
   padding: 1rem;
-  backdrop-filter: blur(8px);
 }
 
 /* Buttons */
@@ -37,6 +37,7 @@ body{
   border-radius: 10px;
   font-weight:700;
   display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+  box-shadow: 0 6px 30px var(--glow);
 }
 
 /* Utility: centered container */
@@ -69,11 +70,26 @@ img{max-width:100%;height:auto;display:block}
 
 /* Focus outlines and accessible interactions */
 *:focus{outline: none}
-*:focus-visible{outline: 3px solid rgba(0,179,179,0.22);outline-offset:3px;border-radius:6px}
+*:focus-visible{outline: 3px solid var(--glow);outline-offset:3px;border-radius:6px}
 
 button, a, input, textarea{transition:box-shadow .12s ease, transform .08s ease}
 
-.btn-primary:focus-visible, .glass a:focus-visible{box-shadow:0 6px 20px rgba(0,179,179,0.12);transform:translateY(-1px)}
+.btn-primary:focus-visible, .surface a:focus-visible{box-shadow:0 8px 28px var(--glow);transform:translateY(-1px)}
+
+/* Card helper for fintech style: thin borders, no blur */
+.card{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:1.25rem;border-radius:12px}
+
+/* Call-to-action primary (fintech) */
+.cta-primary, .btn-primary{background:var(--accent);color:var(--dark);padding:.75rem 1.1rem;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;box-shadow:0 10px 40px var(--glow)}
+
+/* Services grid and card styles */
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:1.25rem;border-radius:10px}
+@media (max-width:900px){.service-grid{grid-template-columns:1fr}}
+
+/* Footer tweaks to match fintech aesthetic */
+footer{background:linear-gradient(90deg,#071021,#0a1520);border-top:1px solid rgba(255,255,255,0.03)}
+
 
 /* Improve color contrast for key text */
 .text-slate-300{color:#cbd5e1}
